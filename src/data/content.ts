@@ -1,6 +1,7 @@
 import cvUrl from '../assets/cv.pdf';
 import valoche from '../assets/val.png';
 import avokia from '../assets/avokia.png';
+import photoUrl from '../assets/photo.jpeg';
 
 export interface Project {
   title: string;
@@ -24,6 +25,7 @@ export const profile = {
   location: "Bordeaux, France",
   email: "theo.modicom@gmail.com",
   disponible: "Disponible pour des missions freelance",
+  photo: photoUrl,
 
 };
 
