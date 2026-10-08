@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/*
+  Jetons de thème (Tailwind v4).
+  Change ces valeurs pour changer toute la palette / typo du site.
+  Elles génèrent automatiquement des classes : bg-ink, text-signal, font-mono, etc.
+*/
+@theme {
+  --color-ink: #14171f;    /* fond principal */
+  --color-panel: #1b1f2a;  /* fond des blocs légèrement surélevés */
+  --color-paper: #e9e6dd;  /* texte principal */
+  --color-muted: #8a8f9c;  /* texte secondaire */
+  --color-signal: #e8a33d; /* accent chaud (liens, CTA) */
+  --color-wire: #2a2f3d;   /* bordures, séparateurs */
+  --color-mint: #6fbf9e;   /* accent secondaire, ponctuel */
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::selection {
+  background-color: var(--color-signal);
+  color: var(--color-ink);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+}
