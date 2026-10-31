@@ -1,21 +1,22 @@
 import { profile } from "../data/content";
 
-const NAV_LINKS = [
-  { href: "#about", label: "À propos" },
-  { href: "#stack", label: "Stack" },
-  { href: "#projects", label: "Projets" },
-  { href: "#contact", label: "Contact" },
+const nav = [
+  ["#about", "À propos"],
+  ["#stack", "Stack"],
+  ["#projects", "Projets"],
+  ["#contact", "Contact"],
 ];
 
-export function renderHeader(): string {
-  const links = NAV_LINKS.map(
-    (link) =>
-      `<a href="${link.href}" class="text-sm text-muted transition-colors hover:text-paper">${link.label}</a>`
-  ).join("");
+const initials = (name: string) => name.split(" ").map((w) => w[0]).join("").toUpperCase();
+
+export function renderHeader() {
+  const links = nav
+    .map(([href, label]) => `<a href="${href}" class="text-sm text-muted transition-colors hover:text-paper">${label}</a>`)
+    .join("");
 
   return `
     <header class="sticky top-0 z-40 border-b border-wire/60 bg-ink/90 backdrop-blur">
-      <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#" class="font-mono text-sm text-paper">
           <span class="text-signal">~/</span>${initials(profile.name)}
         </a>
@@ -41,12 +42,4 @@ export function renderHeader(): string {
       </nav>
     </header>
   `;
-}
-
-function initials(name: string): string {
-  return name
-    .split(" ")
-    .map((part) => part[0])
-    .join("")
-    .toUpperCase();
 }

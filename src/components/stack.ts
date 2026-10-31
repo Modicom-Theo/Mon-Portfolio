@@ -1,19 +1,10 @@
 import { stack } from "../data/content";
+import { section } from "./section";
 
-export function renderStack(): string {
+export function renderStack() {
   const chips = stack
-    .map(
-      (item) =>
-        `<span class="border border-wire px-3 py-1.5 font-mono text-sm text-paper">${item}</span>`
-    )
+    .map((tech) => `<span class="border border-wire px-3 py-1.5 font-mono text-sm text-paper">${tech}</span>`)
     .join("");
 
-  return `
-    <section id="stack" class="border-t border-wire/60 py-20">
-      <div class="mx-auto max-w-5xl px-6">
-        <p class="font-mono text-sm text-signal">// stack</p>
-        <div class="mt-6 flex flex-wrap gap-3">${chips}</div>
-      </div>
-    </section>
-  `;
+  return section("stack", "stack", `<div class="mt-6 flex flex-wrap gap-3">${chips}</div>`);
 }
