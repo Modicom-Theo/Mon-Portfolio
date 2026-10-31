@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 547 414" width="547" height="414" fill="none">
+  <title>Joueur de water-polo développeur</title>
+  <defs>
+    <clipPath id="ball-clip"><circle cx="90" cy="78" r="47"/></clipPath>
+  </defs>
+
+  <!-- Ballon -->
+  <circle cx="90" cy="78" r="47" fill="#12263A"/>
+  <g clip-path="url(#ball-clip)" stroke="#000" stroke-width="4" stroke-linecap="round">
+    <path d="M40 60 Q88 38 138 72"/>
+    <path d="M45 98 Q92 70 140 100"/>
+    <path d="M62 33 Q70 80 122 112"/>
+    <path d="M100 30 Q92 70 60 118"/>
+  </g>
+  <circle cx="90" cy="78" r="47" stroke="#000" stroke-width="3"/>
+
+  <!-- Bras gauche -->
+  <rect x="-57" y="-21" width="115" height="42" rx="14" fill="#D9D9D9" transform="translate(156 155) rotate(51)"/>
+
+  <!-- Corps -->
+  <path d="M230 176 H340 Q373 176 373 215 C373 270 340 322 285 322 C235 322 197 270 197 225 Q197 176 230 176 Z" fill="#D9D9D9"/>
+
+  <!-- Bras droit -->
+  <rect x="-54" y="-21" width="108" height="42" rx="14" fill="#D9D9D9" transform="translate(413 230) rotate(56)"/>
+
+  <!-- Tête + bonnet -->
+  <circle cx="285" cy="138" r="35" fill="#D9D9D9"/>
+  <path d="M250 133 A35 35 0 0 1 320 133 Z" fill="#12263A"/>
+  <circle cx="250" cy="134" r="4" fill="#000"/>
+  <circle cx="319" cy="134" r="4" fill="#000"/>
+
+  <!-- Code </> -->
+  <g stroke="#12263A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="256,226 234,241 256,256"/>
+    <line x1="284" y1="213" x2="275" y2="263"/>
+    <polyline points="314,226 336,241 314,256"/>
+  </g>
+
+  <!-- Vagues -->
+  <g stroke="#12263A" stroke-width="26">
+    <path d="M-30 315 q45 -35 90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0"/>
+    <path d="M-30 355 q45 -35 90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0"/>
+  </g>
+</svg>

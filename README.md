@@ -41,4 +41,8 @@ Tout le texte (nom, bio, projets, liens sociaux) se trouve dans `src/data/conten
 C'est le seul fichier à éditer pour mettre le site à jour — les sections se
 regénèrent automatiquement à partir de ces données.
 
+<<<<<<< HEAD
 Les couleurs et les polices se règlent dans le bloc `@theme` en haut de `src/style.css`.
+=======
+Les couleurs et les polices se règlent dans le bloc `@theme` en haut de `src/style.css`.
+>>>>>>> 747779b (Mise a Jour)
