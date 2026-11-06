@@ -9,7 +9,8 @@ export function renderHero() {
   name: <span class="text-signal">"${profile.name}"</span>,
   role: <span class="text-signal">"${profile.role}"</span>,
   location: <span class="text-signal">"${profile.location}"</span>,
-  disponiblilité: <span class="text-signal">"${profile.disponiblilité}"</span>,
+  disponibilité: <span class="text-signal">"${profile.disponibilité}"</span>,
+  situation: <span class="text-signal">"${profile.situation}"</span>,
 };</code></pre>
 
           <p class="mt-8 max-w-xl text-lg text-muted">${profile.tagline}</p>
@@ -31,13 +32,16 @@ export function renderHero() {
         </div>
 
         <div class="min-w-0">
-          <div class="mx-auto aspect-square w-96 max-w-full overflow-hidden rounded-full ring-2 ring-signal ring-offset-4 ring-offset-ink transition-transform duration-300 hover:scale-105 md:mr-0 md:w-[28rem]">
-            <img
-              src="${profile.photo}"
-              alt="Photo de ${profile.name}"
-              class="h-full w-full object-cover"
-              loading="eager"
-            />
+          <div data-water class="water-frame mx-auto aspect-square w-96 max-w-full md:mr-0 md:w-[28rem]">
+            <svg class="water-ring" aria-hidden="true"><path /></svg>
+            <div class="water-photo">
+              <img
+                src="${profile.photo}"
+                alt="Photo de ${profile.name}"
+                class="h-full w-full object-cover"
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -2,13 +2,13 @@
 
 
 @theme {
-  --color-ink: #14171f;    /* fond principal */
-  --color-panel: #1b1f2a;  /* fond des blocs légèrement surélevés */
-  --color-paper: #e9e6dd;  /* texte principal */
-  --color-muted: #8a8f9c;  /* texte secondaire */
-  --color-signal: #e8a33d; /* accent chaud (liens, CTA) */
-  --color-wire: #2a2f3d;   /* bordures, séparateurs */
-  --color-mint: #6fbf9e;   /* accent secondaire, ponctuel */
+  --color-ink: #14171f;   
+  --color-panel: #1b1f2a;  
+  --color-paper: #e9e6dd; 
+  --color-muted: #8a8f9c;  
+  --color-signal: #e8a33d; 
+  --color-wire: #2a2f3d;   
+  --color-mint: #6fbf9e;   
 
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
@@ -22,6 +22,42 @@ html {
   html {
     scroll-behavior: auto;
   }
+}
+
+.water-frame {
+  position: relative;
+}
+
+.water-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: var(--color-signal);
+  stroke-width: 2;
+  pointer-events: none;
+}
+
+.water-photo {
+  position: absolute;
+  inset: 8px; 
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.js-reveal [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.js-reveal [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 ::selection {

@@ -7,7 +7,8 @@ import { renderProjects } from "./components/projects";
 import { renderContact } from "./components/contact";
 import { renderFooter } from "./components/footer";
 import { initInteractions } from "./utils/interactions";
-
+import { initWater } from "./utils/water";
+import { initReveal } from "./utils/reveal";
 const app = document.querySelector<HTMLDivElement>("#app");
 
 if (app) {
@@ -24,4 +25,6 @@ if (app) {
   `;
 
   initInteractions();
+  initWater();
+  initReveal();
 }
