@@ -3,6 +3,7 @@ import valoche from '../assets/val.png';
 import avokia from '../assets/avokia.png';
 import photoUrl from '../assets/photo.jpeg';
 import logoUrl from '../assets/logo.svg';
+import Obssesia from '../assets/Obssesia.png';
 
 export interface Project {
   title: string;
@@ -68,5 +69,13 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "Tailwind CSS", "PostgreSQL", "AdonisJS v6"],
     repoUrl: "https://github.com/PandaGuerrier/avok-IA",
     imageUrl: avokia,
+  },
+  {
+    title: "Obsess'IA – Jeux d'enquettes IA",
+    description:
+      "Jeu d'enquêtes en equipe, afin de vaincre l'IA qui tente de prendre le controle, trouvez le code parmis les indices et les preuves pour gagner la partie.",
+    stack: ["React 19", "TypeScript", "Tailwind 4", "PostgreSQL", "AdonisJS v7"],
+    repoUrl: "https://github.com/PandaGuerrier/obsessia",
+    imageUrl: Obssesia,
   },
 ];
